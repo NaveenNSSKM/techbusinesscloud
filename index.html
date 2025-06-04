@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Techbusinesslive</title>
+     <link rel="shortcut icon" href="https://techbusinesslive.com/wp-content/uploads/2021/07/tbl-fav-32.png" type="image/x-icon" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      
+    }
+
+    /* Header */
+    .header-banner {
+      padding: 20px 0;
+      width: 100%;
+    
+    }
+
+    .logo-container {
+        
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 90%;
+      padding: 0 10px;
+    }
+
+    .logo {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+    }
+
+    .right-logo {
+      max-width: 86px;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Hero Section */
+    .hero {
+     background-image: url(https://cloudcx.ai/wp-content/themes/zenfy-child/images/internal-bg.jpg);
+      color: white;
+      padding: 50px 45px;
+      text-align: start;
+      width: 100%;
+      border-bottom: 1px solid rgb(126, 126, 126);
+       font-family: 'Lexend Deca', 'Helvetica Neue', Helvetica, sans-serif;
+    }
+
+    .hero h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      
+      margin: 0 auto;
+      
+      padding: 2%;
+      font-family: sans-serif;
+    }
+
+    /* Card Section */
+    .card-section {
+      padding: 40px 0;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .card-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .card-title {
+        text-align: start;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      min-height: 60px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .card-title:hover{
+        color: #8638b7;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 30px;
+      background-color: white;
+      color: #8638b7;
+      border: 1px solid #8638b7;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin-top: auto;
+    }
+
+    .cta-button:hover {
+      background-color: #632787;
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #e0e0e0;
+      font-size: 14px;
+      color: #666;
+      box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer a {
+      color: black;
+      text-decoration: none;
+    }
+
+  footer a:hover {
+  
+  background: linear-gradient(135deg, #d86bff, #a74ddf, #58e3e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* optional for broader support */
+  color: transparent;
+ 
+}
+
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .logo-container {
+        flex-direction: row;
+        justify-content: space-between;
+        
+      }
+       .hero h1 {
+        text-align: justify;
+        
+      }
+      
+      .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      }
+      
+      .card-title {
+        font-size: 16px;
+        min-height: 70px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .logo-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+      
+      .logo, .right-logo {
+        max-width: 120px;
+      }
+      
+      .hero {
+        padding: 30px 15px;
+      }
+      
+      .hero h1 {
+        text-align: justify;
+        padding: 0;
+      }
+      
+      .card-container {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+      }
+      
+      .card-title {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header-banner">
+    <div class="logo-container">
+      <img src="https://techbusinesslive.cloud/redhat/images/techbusinesslive-logo-1.png" alt="Left Logo" class="logo" />
+      <img src="https://cloudcx.ai/wp-content/uploads/2024/06/CloudCX-Small.png" alt="Right Logo" class="logo right-logo" />
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1 style=" font-family: 'Lexend Deca', 'Helvetica Neue', Helvetica, sans-serif;">Red Hat Insights Hub: Containers, AI, SOE, Automation Guide</h1>
+  </div>
+
+  <!-- Card Section -->
+  <section class="card-section">
+    <div class="container">
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card" >
+          <div class="card-image">
+            <a href="APAC.html" target="_blank">
+              <img src="card1.webp" alt="Digital security icons in hands">
+            </a>  
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">How a Leading APAC Airline Prevented IVR Failures Before They Happened</h2>
+            <a target="_blank" href="APAC.html" class="cta-button">Know More</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-image">
+            <a href="Electrolux.html" target="_blank">
+              <img src="card2.jpg" alt="Person using laptop with security shield">
+            </a>  
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">Electrolux Transforms Customer Experience with Lightning-Fast, Cost-Effective Testing</h2>
+
+            <a target="_blank" href="Electrolux.html" class="cta-button">Know More</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-image">
+            <a href="https://techbusinesslive.cloud/redhat/lp/ma-ai.html" target="_blank">
+              <img src="https://techbusinesslive.cloud/redhat/images/ITautomation.jpg" alt="Digital security shield with lock icon">
+            </a>  
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">Electrolux Group</h2>
+
+            <a target="_blank" href="https://techbusinesslive.cloud/redhat/lp/ma-ai.html" class="cta-button">Know More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p> © Copyright 2025<a href="https://cloudcx.ai"> CloudCX</a> </p>
+    </div>
+  </footer>
+</body>
+</html>
