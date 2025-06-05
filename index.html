@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Techbusinesslive</title>
-     <link rel="shortcut icon" href="https://techbusinesslive.com/wp-content/uploads/2021/07/tbl-fav-32.png" type="image/x-icon" />
+ <title>Bussinessscale</title>
+<link rel="shortcut icon" href="https://bussinessscale.com/businessscales_favicon.png" type="image/x-icon" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -46,7 +46,7 @@
     }
 
     .logo {
-      max-width: 150px;
+      max-width: 180px;
       width: 100%;
       height: auto;
     }
@@ -70,7 +70,7 @@
 
     .hero h1 {
       font-size: clamp(24px, 5vw, 36px);
-      
+      text-align: center;
       margin: 0 auto;
       
       padding: 2%;
@@ -91,30 +91,67 @@
     }
 
     .card {
-      background-color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
+}
 
-    .card-image {
-      height: 200px;
-      overflow: hidden;
-    }
+.card:hover {
+  
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
 
-    .card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    
-    .card-image:hover img {
-      transform: scale(1.05);
-    }
+
+   .card-image {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  will-change: transform;
+}
+
+.card-image:hover img {
+  transform: scale(1.1) rotate(0.5deg);
+  filter: brightness(1.05);
+}
+
+/* Diagonal White Shine Filter */
+.card-image::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 25%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.card-image:hover::after {
+  opacity: 1;
+}
+
+
 
     .card-content {
       padding: 20px;
@@ -190,10 +227,7 @@
         justify-content: space-between;
         
       }
-       .hero h1 {
-        text-align: justify;
-        
-      }
+       
       
       .card-container {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -212,8 +246,12 @@
         padding: 0 10px;
       }
       
-      .logo, .right-logo {
-        max-width: 120px;
+      .logo {
+        max-width: 170px;
+      }
+
+      .right-logo {
+        max-width: 80px;
       }
       
       .hero {
@@ -221,7 +259,7 @@
       }
       
       .hero h1 {
-        text-align: justify;
+       
         padding: 0;
       }
       
@@ -241,14 +279,14 @@
   <!-- Header -->
   <div class="header-banner">
     <div class="logo-container">
-      <img src="https://techbusinesslive.cloud/redhat/images/techbusinesslive-logo-1.png" alt="Left Logo" class="logo" />
+      <img src="https://bussinessscale.com/bussinessscales_logo.png" alt="Left Logo" class="logo" />
       <img src="https://cloudcx.ai/wp-content/uploads/2024/06/CloudCX-Small.png" alt="Right Logo" class="logo right-logo" />
     </div>
   </div>
 
   <!-- Hero Section -->
   <div class="hero">
-    <h1 style=" font-family: 'Lexend Deca', 'Helvetica Neue', Helvetica, sans-serif;">Red Hat Insights Hub: Containers, AI, SOE, Automation Guide</h1>
+    <h1 style=" font-family: 'Lexend Deca', 'Helvetica Neue', Helvetica, sans-serif;">How Industry Leaders Future-Proofed Customer Experience with Scalable, Real-World Testing</h1>
   </div>
 
   <!-- Card Section -->
@@ -285,14 +323,14 @@
         <!-- Card 3 -->
         <div class="card">
           <div class="card-image">
-            <a href="https://techbusinesslive.cloud/redhat/lp/ma-ai.html" target="_blank">
+            <a href="cxassurance.html" target="_blank">
               <img src="https://techbusinesslive.cloud/redhat/images/ITautomation.jpg" alt="Digital security shield with lock icon">
             </a>  
           </div>
           <div class="card-content">
-            <h2 class="card-title">Electrolux Group</h2>
+            <h2 class="card-title">How One Strategic Test Rewrote the Rules of CX Assurance </h2>
 
-            <a target="_blank" href="https://techbusinesslive.cloud/redhat/lp/ma-ai.html" class="cta-button">Know More</a>
+            <a target="_blank" href="cxassurance.html" class="cta-button">Know More</a>
           </div>
         </div>
 
@@ -303,7 +341,8 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p> © Copyright 2025<a href="https://cloudcx.ai"> CloudCX</a> </p>
+      <p>Copyright © 2025 Businessscale</p>
+      <p>If you would like to change your communication preferences <a href="mailto:support@bussinessscale.com">click here</a>.</p>
     </div>
   </footer>
 </body>
